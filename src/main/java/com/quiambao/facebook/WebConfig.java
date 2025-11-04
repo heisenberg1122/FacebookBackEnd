@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-             
+                // FIX: Allow the deployed Render frontend AND the local development server
                 .allowedOrigins(
                     "https://facebook-py3j.onrender.com", 
                     "http://localhost:5173" 
